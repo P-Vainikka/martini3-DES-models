@@ -1,0 +1,20 @@
+; Martini 3 Decanoic Acid (protonated)
+; version: 0.1
+[moleculetype]
+; molname       nrexcl
+  DECA          1
+
+[atoms]
+; id    type    resnr   residu  atom    cgnr    charge  mass
+ 1      P2      1       DECA    O1      1       0.00    59.024
+ 2      C1      1       DECA    C1      2       0.00    56.104
+ 3      C1      1       DECA    C2      3       0.00    57.112
+
+[bonds]
+; i j   funct   length  force.c.
+  1 2   1       0.40    5000
+  2 3   1       0.48    5000
+
+[angles]
+; i j k         funct   angle   force.c.
+  1 2 3         2       150.0   50.0 
