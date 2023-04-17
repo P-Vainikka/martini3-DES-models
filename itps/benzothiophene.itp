@@ -1,0 +1,50 @@
+;;;;;; Benzothiophene
+;
+;;; Cite: https://doi.org/10.1021/acssuschemeng.1c06521
+;;; Notes:
+; version:           0.1
+; logP:              2.91 +/- 0.05
+; logP(exp):         3.21 (https://doi.org/10.1021/jm950902o)
+; SASA (CG/Rowland): 0.994
+
+[ moleculetype ]
+; molname    nrexcl
+  BETP         1 
+
+[ atoms ]
+; nr type resnr residue atom cgnr charge mass
+   1  TC6   1    BETP   TC6   1    0     40.000
+   2  TC5   1    BETP   TC5   2    0     33.000
+   3  TC5   1    BETP   TC5   3    0     33.000
+   4  TC5   1    BETP   TC5   4    0     33.000
+   5  TC5   1    BETP   TC5   5    0     0.0000
+   
+[ virtual_sitesn ]
+; site funct  constructing atom indices
+   5     1     1 2 3 4
+
+[ constraints ]
+ 1 2     1     0.240
+ 2 4     1     0.420  
+ 3 4     1     0.290  
+ 3 1     1     0.360  
+ 1 4     1     0.460  
+;In case minimization gives you trouble, use stiff bonds.
+;[ bonds ]
+; 1 2     1     0.240  25000
+; 2 4     1     0.420  25000
+; 3 4     1     0.290  25000
+; 3 1     1     0.360  25000
+; 1 4     1     0.460  25000
+
+[ dihedrals ]
+;improper
+; i j k l  funct  ref.angle force_k
+  2 1 4 3    2       180     200
+
+[ exclusions ]
+1 2 3 4 5 
+2 3 4 5
+3 4 5
+4 5
+5 
