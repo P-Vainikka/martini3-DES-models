@@ -1,0 +1,22 @@
+;;;;;; Choline -cation
+;
+;;; Cite: https://doi.org/10.1021/acssuschemeng.1c06521
+;;; Notes:
+; version:           0.1
+; logP:             -2.65 +/- 0.09
+; logP(exp):         ?
+; logP(pred): 	    -3.6
+; SASA (CG/Rowland): 0.950
+
+[ moleculetype ]
+; molname    nrexcl
+  CHOL         1 
+
+[ atoms ]
+; nr type resnr residue atom cgnr charge mass
+   1  Q2p   0    CHOL   N1    1    1     59.110
+   2  SP1   0    CHOL   OH    2    0     45.050
+
+[ bonds ]
+  1 2     1     0.295  3500
+

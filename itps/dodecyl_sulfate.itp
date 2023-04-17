@@ -1,0 +1,30 @@
+;;;;;; Dodecyl sulfate -anion
+;
+;;; Cite: https://doi.org/10.1021/acssuschemeng.1c06521
+;;; Notes:
+; version:           0.1
+; logP:              4.61 +/- 0.11
+; logP(exp):         ?
+; logP(pred):        4.42
+; SASA (CG/Rowland): 0.985
+
+[ moleculetype ]
+; Name            nrexcl
+SDS                  1
+
+[ atoms ]
+;  nr      type  resnr residue  atom  cgnr    charge      mass  typeB    chargeB      massB
+    1        Q4n     1  SDS     SO4    1       -1.0         96.0576  
+    2        C1      1  SDS     C1     2          0         56.108
+    3        C1      1  SDS     C2     3          0         56.108
+    4        C1      1  SDS     C3     4          0         57.116
+
+[ bonds ]
+1 2	  1     0.41   10000
+2 3	  1	0.47   5000
+3 4	  1	0.47   5000
+
+[ angles ]
+1 2 3	  2 	165    15.0
+2 3 4 	  2 	175    25.0
+

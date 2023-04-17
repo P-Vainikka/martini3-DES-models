@@ -1,0 +1,54 @@
+;;;;;; Dibenzothiophene
+;
+;;; Cite: https://doi.org/10.1021/acssuschemeng.1c06521
+;;; Notes:
+; version:           0.1
+; logP:              3.82 +/- 0.07
+; logP(exp):         4.38 (https://doi.org/10.1021/jm950902o)
+; SASA (CG/Rowland): Not measured
+
+
+[ moleculetype ]
+; molname    nrexcl
+  DBTP         1 
+
+[ atoms ]
+; nr type resnr residue atom cgnr charge mass
+   1  SC6   1    DBTP    S1   1    0     40.000
+   2  TC5   1    DBTP    R1   2    0     33.000
+   3  TC5   1    DBTP    R2   3    0     33.000
+   4  TC5   1    DBTP    R3   4    0     0.0000
+   5  TC5   1    DBTP    R4   5    0     30.000
+   6  TC5   1    DBTP    R5   5    0     30.000
+   
+[ virtual_sitesn ]
+; site funct  constructing atom indices
+   4     1     2 3 5 6
+
+[ bonds ]
+; i  j  funct  length  fc.
+  1  4	 1     0.170  25000
+  3  4   1     0.280  25000
+  4  5   1     0.280  25000
+
+[ constraints ]
+; i  j  funct   length
+  1  2    1     0.345
+  1  6    1     0.345
+  2  3    1     0.290
+  5  6    1     0.290
+
+[ dihedrals ]
+;improper
+; i j k l  funct  ref.angle force_k
+  5 6 3 2    2       180     200
+  1 6 3 2    2        0      200 ; keep the S-bead in plane
+  1 2 5 6    2        0      200 ; keep the S-bead in plane
+
+[ exclusions ]
+1 2 3 4 5 6 
+2 3 4 5 6 
+3 4 5 6 
+4 5 6 
+5 6
+6 

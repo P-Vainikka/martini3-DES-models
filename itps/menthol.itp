@@ -1,0 +1,36 @@
+;;;;;; (D/L) Menthol
+;
+;;; Cite: https://doi.org/10.1021/acssuschemeng.1c06521
+;;; Notes:
+; version:           0.1
+; logP:              2.73 +/- 0.17
+; logP(exp):         3.03 (https://doi.org/10.1021/jm950902o)
+; SASA (CG/Rowland): 0.956
+
+[ moleculetype ]
+; molname    nrexcl
+  DMEN         1 
+
+[ atoms ]
+; nr type resnr residue atom cgnr charge mass
+   1  SC3   0    DMEN   SC3   1    0     39.000
+   2  TC3   0    DMEN   TC3   2    0     27.000
+   3  SP1   0    DMEN   SP1   3    0     44.000
+   4  SC2   0    DMEN   SC2   4    0     43.000
+   
+[bonds]
+; i j   funct   length  force.c.
+  2 4     1     0.365   5000  
+
+[ constraints ]
+  1 2     1     0.250  
+  1 3     1     0.300  
+  2 3     1     0.320   
+
+[ angles ]
+;  ai   aj   ak  funct   angle     fc
+   1    2    3     1       60      100.0
+   1    3    2     1       50      200.0
+   4    2    1     1      125      250.0
+   4    3    1     1      110      250.0
+

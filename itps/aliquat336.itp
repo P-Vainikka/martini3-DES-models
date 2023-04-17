@@ -1,0 +1,55 @@
+;;;;;; Aliquat 336 (Stark's catalyst)
+;
+;;; Cite: Not published yet
+;;; Notes:
+; version:           0.1
+; logP:              To be measured
+; logP(exp):         To be found
+; SASA (CG/Rowland): To be measured
+
+[moleculetype]
+; molname 	nrexcl
+  TOAC		3
+
+[atoms]
+; id 	type 	resnr 	residu 	atom 	cgnr 	charge	mass
+ 1 	N2q 	1 	TOAC 	N1  	1 	0.32 	70.000
+ 2 	SC3q	1 	TOAC 	C1	2 	0.00 	42.000
+ 3 	C3   	1 	TOAC 	C2  	3 	0.00 	57.000
+ 4 	SC3q	1 	TOAC 	C3  	4 	0.00 	42.000
+ 5 	C3  	1 	TOAC 	C4  	5 	0.00 	57.000
+ 6 	SC3q	1 	TOAC 	C5  	6 	0.00 	42.000
+ 7 	C3  	1 	TOAC 	C6  	7 	0.00 	57.000
+ 8	U	1	TOAC	U	8	0.17	0.0000
+ 9	U	1	TOAC	U	9	0.17	0.0000
+ 10	U	1	TOAC	U	10	0.17	0.0000
+ 11	U	1	TOAC	U	11	0.17	0.0000
+
+[ virtual_sitesn ]
+; site funct  constructing atom indices
+   8     2     1 2 4
+   9     2     1 2 6
+   10    2     1 4 6
+
+[ virtual_sites3 ]
+; site  from  funct    a     b     c
+   11   1 4 6   4    -0.1  -0.1  -0.72
+   
+[ bonds ]
+; i j 	funct 	length 	force.c.
+  1 2 	1 	0.405	5000
+  2 3 	1 	0.445 	5000
+  1 4 	1 	0.405	5000
+  4 5 	1 	0.445	5000
+  1 6 	1 	0.405	5000
+  6 7 	1 	0.445	5000
+
+
+[ angles ]
+; i j k 	funct 	angle 	force.c.
+  1 2 3 	2 	140.0  	25.0 
+  1 4 5 	2 	140.0  	25.0 
+  1 6 7 	2 	140.0  	25.0 
+  2 1 4 	2 	115.0  	25.0 
+  2 1 6 	2 	115.0  	25.0 
+  4 1 6 	2 	115.0  	25.0 
